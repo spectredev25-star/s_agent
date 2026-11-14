@@ -4,7 +4,7 @@ These Pydantic models describe validated application data. They do not perform
 database persistence; repositories will handle that in a later implementation.
 """
 
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from enum import StrEnum
 from uuid import UUID, uuid4
 
@@ -30,7 +30,7 @@ class ProjectBase(BaseModel):
     description: str | None = Field(default=None, max_length=2000)
     objectives: list[str] = Field(default_factory=list)
     tech_stack: list[str] = Field(default_factory=list)
-    target_date: datetime | None = None
+    target_date: date | None = None
 
 
 class ProjectCreate(ProjectBase):
