@@ -9,6 +9,7 @@ from .project_analysis import (
     ProjectRequirement,
     RequirementCategory,
     RequirementPriority,
+    RiskLevel,
 )
 
 __all__ = [
@@ -24,4 +25,5 @@ __all__ = [
     "ProjectUpdate",
     "RequirementCategory",
     "RequirementPriority",
+    "RiskLevel",
 ]
